@@ -20,24 +20,9 @@ const useStyles = makeStyles((theme) => ({
   tabbar: {
     overflow: 'hidden',
   },
-  body: {
-    background: '#fff',
-    paddingTop: theme.spacing(1),
-    height: '100vh',
-  },
-  smFullHeight: {
-    [theme.breakpoints.up('sm')]: {
-      height: '100%',
-    },
-  },
   mainPaper: {
     padding: theme.spacing(1),
     background: '#F7F9FC',
-  },
-  workshopTabsPaper: {
-    padding: theme.spacing(1),
-    background: '#F7F9FC',
-    height: '100%',
   },
 }));
 
@@ -59,7 +44,7 @@ const Article = ({ article = { widgets: [] }, articleId, getArticle }) => {
   const classes = useStyles();
 
   return (
-    <Container component="main" className={classes.body}>
+    <Container maxWidth='lg' component="main">
       <ResponsiveAppBar mode="ARTICLE" />
       {article && (
         <Grid

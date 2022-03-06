@@ -18,10 +18,10 @@ const ArticleAppBarItems = () => {
     </Button>
   );
   return {
-    desktopLeftItems: [BackButton],
+    desktopLeftItems: [],
     desktopRightItems: [logoButton],
     mobileLeftItems: [logoButton],
-    mobileRightItems: [BackButton],
+    mobileRightItems: [],
     mobileMenuListItems: [],
   };
 };
