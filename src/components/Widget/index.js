@@ -4,15 +4,16 @@ import WIDGET_TYPES from './WidgetTypes';
 
 export const MODES = {
   VIEW: 'VIEW',
+  EDIT: 'EDIT',
+  CORRECTION: 'CORRECTION',
 };
 
-const Widget = ({ widget, mode = MODES.VIEW, ...props }) => {
+const Widget = ({ widget, ...props }) => {
   const { WidgetComponent } = WIDGET_TYPES[widget.widget_type];
-
   return (
-    <div>
-      <WidgetComponent {...props} {...widget} mode={mode} />
-    </div>
+    <>
+      <WidgetComponent  {...widget} {...props} />
+    </>
   );
 };
 

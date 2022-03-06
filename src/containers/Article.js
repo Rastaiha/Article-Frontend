@@ -68,7 +68,7 @@ const Article = ({ article = { widgets: [] }, articleId, getArticle }) => {
           direction="row-reverse"
           spacing={2}
           style={{ marginTop: 70 }}>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <ArticleCard2 {...articleData[articleId]} withoutButton />
             <Grid
               container
@@ -118,12 +118,16 @@ const Article = ({ article = { widgets: [] }, articleId, getArticle }) => {
                 </IconButton>
               </Grid>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} md={8}>
             <Paper className={classes.mainPaper}>
-              {widgets.map((widget) => (
-                <Widget key={widget.id} widget={widget} />
-              ))}
+              <Grid item container spacing={2}>
+                {widgets.map((widget) => (
+                  <Grid item xs={12} key={widget.id}>
+                    <Widget widget={widget} />
+                  </Grid>
+                ))}
+              </Grid>
             </Paper>
           </Grid>
         </Grid>

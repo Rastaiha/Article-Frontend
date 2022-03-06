@@ -3,7 +3,7 @@ import Axios from 'axios';
 export const baseURL =
   process.env.NODE_ENV === 'production'
     ? 'https://workshop.rastaiha.ir'
-    : 'https://workshop.rastaiha.ir';
+    : 'https://backend.rastaiha.ir';
 
 const baseAxios = Axios.create({
   baseURL: baseURL + '/api/',
