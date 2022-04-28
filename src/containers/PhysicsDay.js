@@ -122,14 +122,14 @@ const useStyles = makeStyles((theme) => ({
 
 export const articleData = {
   12: {
-    id: 12,
+    id: 519,
     img: process.env.PUBLIC_URL + '/mp.jpg',
     name: 'عدد پی با چند رقم اعشار',
     description:
       'یکی از اعداد عجیبی که همه‌مون توی مدرسه خیلی زود باهاش آشنا می‌شیم عدد «پی»ئه. به‌نظرت از چه روش‌هایی می‌تونیم مقدار عدد پی رو با تقریب نسبتاً خوبی محاسبه کنیم؟ در ادامۀ این نوشته قراره به دو روش که هر دوتا مبتنی بر احتمال هستن این کار رو انجام بدیم. پس بزن بریم!',
   },
   13: {
-    id: 13,
+    id: 518,
     img: process.env.PUBLIC_URL + '/zharfa_rasta.png',
     name: 'دنیای کوچک ما',
     description:
@@ -167,7 +167,7 @@ function PhysicsDay() {
               component="h2"
               variant="h3"
               className={classes.subtitle}>
-              آخرِ آخرین هفته‌ی آذر
+              آخرِ آخرین هفته‌ی آذر ۱۳۹۹
             </Typography>
           </Grid>
           <Grid item>
