@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '80px',
     fontWeight: 900,
     color: '#eee',
-    textShadow: '3px 3px #888',
+    textShadow: '2px 2px 5px #4f4f4f',
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
       fontSize: 60,
@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontWeight: 800,
     lineHeight: '30px',
-    color: '#E20814',
-    textShadow: '-1px 1px #aaa',
+    color: '#eee',
+    textShadow: '-1px 1px 3px #4f4f4f',
     marginTop: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       fontSize: 20,
@@ -95,10 +95,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     zIndex: '100',
     opacity: '1',
-    boxShadow: '1px 1px 10px black',
+    // boxShadow: '1px 1px 10px black',
     color: '#f7f2f6',
     background: '#410066',
-    padding: theme.spacing(4, 1),
+    padding: theme.spacing(6, 0),
   },
 
   section5: {
@@ -115,8 +115,10 @@ const useStyles = makeStyles((theme) => ({
   },
 
   daneshmandanContainer: {
-    margin: 'auto',
-    display: 'table',
+    alignContent: 'center',
+    justifyContent: 'center',
+    // margin: 'auto',
+    // display: 'table',
   },
 }));
 
@@ -142,7 +144,7 @@ function PhysicsDay() {
 
   return (
     <>
-      <Container className={classes.section1}>
+      <Container maxWidth='lg' className={classes.section1}>
         <div id="back-to-top-anchor"></div>
         <div className={classes.landingBackground} />
         <img
@@ -180,30 +182,32 @@ function PhysicsDay() {
         </Grid>
       </Container>
 
-      <Container className={classes.section2}>
-        <Grid
-          container
-          direction="row"
-          spacing={3}
-          alignItems="center"
-          justify="center">
-          <Grid container item xs={12} sm={4} md={3} justify="center">
-            <ArticleCard2 {...articleData[13]} />
+      <section className={classes.section2}>
+        <Container maxWidth='lg' >
+          <Grid
+            container
+            direction="row"
+            spacing={3}
+            alignItems="center"
+            justify="center">
+            <Grid container item xs={12} sm={9} md={3} justify="center">
+              <ArticleCard2 {...articleData[13]} />
+            </Grid>
+            <Grid item container justify='center' sm={9} md={3}>
+              <Grid item>
+                <img
+                  style={{ height: '80vh' }}
+                  src={process.env.PUBLIC_URL + '/daneshmandan.png'}
+                  alt="دانشمندان"
+                />
+              </Grid>
+            </Grid>
+            <Grid container item xs={12} sm={9} md={3} justify="center">
+              <ArticleCard2 {...articleData[12]} />
+            </Grid>
           </Grid>
-          <Grid item sm={3}>
-            <div className={classes.daneshmandanContainer}>
-              <img
-                style={{ height: '80vh' }}
-                src={process.env.PUBLIC_URL + '/daneshmandan.png'}
-                alt="دانشمندان"
-              />
-            </div>
-          </Grid>
-          <Grid container item xs={12} sm={4} md={3} justify="center">
-            <ArticleCard2 {...articleData[12]} />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </section>
 
       {/* <Container className={`${classes.section5} ${classes.centerItems}`}>
         <Grid container direction="column" spacing={4}>
